@@ -5,6 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import com.qa.opencart.factory.DriverFactory;
+import com.qa.opencart.pages.AccountPage;
 import com.qa.opencart.pages.LoginPage;
 
 public class BaseTest {
@@ -12,6 +13,7 @@ public class BaseTest {
 	DriverFactory du;
 	WebDriver driver;
 	protected LoginPage loginPage;
+	protected AccountPage accPage;
 
 	@BeforeTest
 

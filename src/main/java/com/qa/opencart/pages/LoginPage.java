@@ -31,11 +31,11 @@ public class LoginPage {
 		return driver.findElement(forgotPasswordlinkBy).isDisplayed();
 	}
 	
-	public void dologiin(String un, String pwd) {
+	public AccountPage dologiin(String un, String pwd) {
 		driver.findElement(emailid).sendKeys(un);
 		driver.findElement(passwordBy).sendKeys(pwd);
 		driver.findElement(login_btn).click();
-
+        return new AccountPage(driver);
 		
 	}
 	
