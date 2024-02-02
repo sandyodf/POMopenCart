@@ -22,13 +22,13 @@ public class LoginPage {
 
 	public String getPageTitle() {
 //		String title = driver.getTitle();
-		String title = elementUtil.waitForTitleIsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"Account Login");
+		String title = elementUtil.waitForTitleIsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,APPconstants.LOGIN_PAGE_TITLE_VALUE);
 		return title;
 	}
 	
 	public String getpageUrl() {
 //		String url = driver.getCurrentUrl();
-		String url =elementUtil.waitForURLContainsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"route=account/login");
+		String url =elementUtil.waitForURLContainsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,APPconstants.LOGIN_PAGE_URL_VALUE);
 		return url;
 	}
 	
@@ -42,7 +42,7 @@ public class LoginPage {
 //		driver.findElement(passwordBy).sendKeys(pwd);
 //		driver.findElement(login_btn).click();
 		
-		elementUtil.waitForElementVisible(emailid, 10);
+		elementUtil.waitForElementVisible(emailid, APPconstants.DEFAULT_SHORT_TIME_OUT);
 		elementUtil.doSendKeys(passwordBy, pwd);
 		elementUtil.doClick(login_btn);
         return new AccountPage(driver);
