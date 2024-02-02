@@ -25,7 +25,7 @@ public class loginTestcase extends BaseTest{
 	
 	@Test
 	public void doLoginTest() {
-		loginPage.dologiin("deepu.odf@gmail.coom", "Test@12345");
+		loginPage.dologiin("deepu.odf@gmail.coom", "Test@1234");
 	}
 	
 	

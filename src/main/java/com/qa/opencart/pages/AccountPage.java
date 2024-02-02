@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.qa.opencart.constants.APPconstants;
 import com.qa.opencart.utils.ElementUtil;
 
 
@@ -22,21 +23,21 @@ public class AccountPage {
 
 	public String getAccPageTitle() {
 //		String title = driver.getTitle();
-		String title = elementUtil.waitForTitleIsAndFetch(10,"My Account");
+		String title = elementUtil.waitForTitleIsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"My Account");
 
 		return title;
 	}
 
 	public String getAccpageUrl() {
 //		String url = driver.getCurrentUrl();
-		String url =elementUtil.waitForURLContainsAndFetch(10,"route=account/account");
+		String url =elementUtil.waitForURLContainsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"route=account/account");
 
 		return url;
 	}
 	
 	public List<WebElement> getaccountRightPaneLinks(){
 //		return driver.findElements(accountRightPaneLinks);
-		return elementUtil.waitForElementsVisible(accountRightPaneLinks, 10);
+		return elementUtil.waitForElementsVisible(accountRightPaneLinks, APPconstants.DEFAULT_SHORT_TIME_OUT);
 	}
 	
 	public void clickOnAccountElements(String link) {

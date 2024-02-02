@@ -3,6 +3,7 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.qa.opencart.constants.APPconstants;
 import com.qa.opencart.utils.ElementUtil;
 
 public class LoginPage {
@@ -21,19 +22,19 @@ public class LoginPage {
 
 	public String getPageTitle() {
 //		String title = driver.getTitle();
-		String title = elementUtil.waitForTitleIsAndFetch(10,"Account Login");
+		String title = elementUtil.waitForTitleIsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"Account Login");
 		return title;
 	}
 	
 	public String getpageUrl() {
 //		String url = driver.getCurrentUrl();
-		String url =elementUtil.waitForURLContainsAndFetch(10,"route=account/login");
+		String url =elementUtil.waitForURLContainsAndFetch(APPconstants.DEFAULT_SHORT_TIME_OUT,"route=account/login");
 		return url;
 	}
 	
 	public boolean isForgotPassDisplayed() {
 //		return driver.findElement(forgotPasswordlinkBy).isDisplayed();
-		return elementUtil.waitForElementVisible(forgotPasswordlinkBy,10).isDisplayed();
+		return elementUtil.waitForElementVisible(forgotPasswordlinkBy,APPconstants.DEFAULT_SHORT_TIME_OUT).isDisplayed();
 	}
 	
 	public AccountPage dologiin(String un, String pwd) {
