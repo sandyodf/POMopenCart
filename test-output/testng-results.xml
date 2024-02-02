@@ -2,28 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-01T08:10:40Z" name="Default suite" finished-at="2024-02-01T08:11:04Z" duration-ms="24077">
+  <suite started-at="2024-02-02T04:30:24Z" name="Default suite" finished-at="2024-02-02T04:30:45Z" duration-ms="20800">
     <groups>
     </groups>
-    <test started-at="2024-02-01T08:10:40Z" name="Default test" finished-at="2024-02-01T08:11:04Z" duration-ms="24077">
-      <class name="com.qa.opencart.testcases.loginTestcase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.testcases.loginTestcase@5833f5cd]" started-at="2024-02-01T08:10:40Z" name="setup" finished-at="2024-02-01T08:11:03Z" duration-ms="23169" status="PASS">
+    <test started-at="2024-02-02T04:30:24Z" name="Default test" finished-at="2024-02-02T04:30:45Z" duration-ms="20800">
+      <class name="com.qa.opencart.testcases.accountPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.testcases.accountPageTest@23592946]" started-at="2024-02-02T04:30:24Z" name="setup" finished-at="2024-02-02T04:30:40Z" duration-ms="16176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginPageTitleTest()[pri:0, instance:com.qa.opencart.testcases.loginTestcase@5833f5cd]" started-at="2024-02-01T08:11:03Z" name="loginPageTitleTest" finished-at="2024-02-01T08:11:03Z" duration-ms="201" status="PASS">
+        <test-method is-config="true" signature="accountSetup()[pri:0, instance:com.qa.opencart.testcases.accountPageTest@23592946]" started-at="2024-02-02T04:30:41Z" name="accountSetup" finished-at="2024-02-02T04:30:44Z" duration-ms="3739" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method signature="loginPageUrlTest()[pri:0, instance:com.qa.opencart.testcases.loginTestcase@5833f5cd]" started-at="2024-02-01T08:11:03Z" name="loginPageUrlTest" finished-at="2024-02-01T08:11:03Z" duration-ms="23" status="PASS">
+        </test-method> <!-- accountSetup -->
+        <test-method signature="getAccPageTitleTest()[pri:0, instance:com.qa.opencart.testcases.accountPageTest@23592946]" started-at="2024-02-02T04:30:44Z" name="getAccPageTitleTest" finished-at="2024-02-02T04:30:45Z" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageUrlTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.testcases.loginTestcase@5833f5cd]" started-at="2024-02-01T08:11:03Z" name="tearDown" finished-at="2024-02-01T08:11:04Z" duration-ms="387" status="PASS">
+        </test-method> <!-- getAccPageTitleTest -->
+        <test-method signature="getAccPageUrlTest()[pri:0, instance:com.qa.opencart.testcases.accountPageTest@23592946]" started-at="2024-02-02T04:30:45Z" name="getAccPageUrlTest" finished-at="2024-02-02T04:30:45Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccPageUrlTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.testcases.accountPageTest@23592946]" started-at="2024-02-02T04:30:45Z" name="tearDown" finished-at="2024-02-02T04:30:45Z" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.opencart.testcases.loginTestcase -->
+      </class> <!-- com.qa.opencart.testcases.accountPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
