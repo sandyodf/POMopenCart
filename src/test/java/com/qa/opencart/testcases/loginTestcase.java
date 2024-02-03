@@ -8,14 +8,15 @@ import com.qa.opencart.base.BaseTest;
 public class loginTestcase extends BaseTest{
 	
 	
-	@Test
+	@Test(priority = 1)
 	
 	public void loginPageTitleTest() {
 	 String  actualTitle= loginPage.getPageTitle();
 	Assert.assertEquals(actualTitle, "Account Login");
 		
 	}
-	@Test
+	
+	@Test(priority = 2)
 	public void loginPageUrlTest() {
 		String actualurl =loginPage.getpageUrl();
 		
@@ -26,10 +27,10 @@ public class loginTestcase extends BaseTest{
 		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void doLoginTest() throws Exception {
-//		loginPage.dologiin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
-		loginPage.dologiin("deepu.odf@gmail.coom", "Tet@1234");
+		loginPage.dologiin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
+//		loginPage.dologiin("deepu.odf@gmail.coom", "Tet@1234");
 		System.out.println("username :"+prop.getProperty("username")+" password: "+prop.getProperty("password"));
 	}
 	

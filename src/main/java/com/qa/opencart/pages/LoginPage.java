@@ -42,7 +42,8 @@ public class LoginPage {
 //		driver.findElement(passwordBy).sendKeys(pwd);
 //		driver.findElement(login_btn).click();
 		
-		elementUtil.waitForElementVisible(emailid, APPconstants.DEFAULT_SHORT_TIME_OUT);
+//		elementUtil.waitForElementVisible(emailid, APPconstants.DEFAULT_LONG_TIME_OUT);
+		elementUtil.doSendKeys(emailid, un);
 		elementUtil.doSendKeys(passwordBy, pwd);
 		elementUtil.doClick(login_btn);
         return new AccountPage(driver);

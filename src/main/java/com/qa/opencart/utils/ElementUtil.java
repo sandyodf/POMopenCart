@@ -34,7 +34,8 @@ public class ElementUtil {
 		WebElement element =driver.findElement(locator);
 		
 		if(Boolean.parseBoolean(DriverFactory.hightlight)) {
-			js.flash(element);
+//			js.flash(element);
+			js.drawBorder(element);
 
 		}
 		
