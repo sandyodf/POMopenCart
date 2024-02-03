@@ -1,5 +1,7 @@
 package com.qa.opencart.base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -11,6 +13,8 @@ import com.qa.opencart.pages.LoginPage;
 public class BaseTest {
 
 	DriverFactory du;
+	protected Properties prop;
+	
 	WebDriver driver;
 	protected LoginPage loginPage;
 	protected AccountPage accPage;
@@ -19,7 +23,8 @@ public class BaseTest {
 
 	public void setup() {
 		du = new DriverFactory();
-		driver= du.initDriver("chrome");
+		prop=du.intProp();
+		driver= du.initDriver(prop);
 		loginPage = new LoginPage(driver);
 
 	}

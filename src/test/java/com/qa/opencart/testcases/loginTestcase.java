@@ -18,14 +18,19 @@ public class loginTestcase extends BaseTest{
 	@Test
 	public void loginPageUrlTest() {
 		String actualurl =loginPage.getpageUrl();
+		
+		System.out.println("browser :"+prop.getProperty("browser")+" headless: "+prop.getProperty("headless"));
+
 		Assert.assertTrue(actualurl.contains("route=account/login"));
 		
 		
 	}
 	
 	@Test
-	public void doLoginTest() {
-		loginPage.dologiin("deepu.odf@gmail.coom", "Test@1234");
+	public void doLoginTest() throws Exception {
+//		loginPage.dologiin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
+		loginPage.dologiin("deepu.odf@gmail.coom", "Tet@1234");
+		System.out.println("username :"+prop.getProperty("username")+" password: "+prop.getProperty("password"));
 	}
 	
 	

@@ -11,7 +11,8 @@ public class accountPageTest extends BaseTest {
 	@BeforeClass
 
 	public void accountSetup() {
-		accPage=loginPage.dologiin("deepu.odf@gmail.coom", "Test@1234");
+		accPage=loginPage.dologiin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
+
 
 	}
 

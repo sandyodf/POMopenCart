@@ -18,16 +18,27 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.qa.opencart.factory.DriverFactory;
+
 public class ElementUtil {
 
 	private WebDriver driver;
+	private JavaScriptUtil js;
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
+		this.js = new JavaScriptUtil(driver);
 	}
 
 	public WebElement getElement(By locator) {
-		return driver.findElement(locator);
+		WebElement element =driver.findElement(locator);
+		
+		if(Boolean.parseBoolean(DriverFactory.hightlight)) {
+			js.flash(element);
+
+		}
+		
+		return element;
 	}
 
 	public WebElement getElement(By locator, int timeOut) {
